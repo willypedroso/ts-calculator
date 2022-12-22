@@ -1,0 +1,41 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: gray;
+    padding: 10px;
+    border: 3px black solid;
+    border-radius: 15px;
+}
+
+.btnRow {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn {
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+}

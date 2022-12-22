@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div id="calculator">
+            <input type="text" id="display">
+            <div id="buttons">
+                <div class="btnRow">
+                    <input class="btn" onclick="btnAction(value)" type="button" value="7">
+                    <input class="btn" onclick="btnAction(value)" type="button" value="8">
+                    <input class="btn" onclick="btnAction(value)" type="button" value="9">
+                    <input class="btn" onclick="btnAction(value)" style="background-color: rgb(230, 208, 17)" type="button" value="E">
+                    <input class="btn" onclick="btnAction(value)" style="background-color: rgb(224, 16, 16)" type="button" value="C">
+                </div>
+                <div class="btnRow">
+                    <input class="btn" onclick="btnAction(value)" type="button" value="4">
+                    <input class="btn" onclick="btnAction(value)" type="button" value="5">
+                    <input class="btn" onclick="btnAction(value)" type="button" value="6">
+                    <input class="btn" onclick="btnAction(value)" type="button" value="/">
+                    <input class="btn" onclick="btnAction(value)" type="button" value="-">
+                </div>
+                <div class="btnRow">
+                    <input class="btn" onclick="btnAction(value)" type="button" value="1">
+                    <input class="btn" onclick="btnAction(value)" type="button" value="2">
+                    <input class="btn" onclick="btnAction(value)" type="button" value="3">
+                    <input class="btn" onclick="btnAction(value)" type="button" value="*">
+                    <input class="btn" onclick="btnAction(value)" type="button" value="+">
+                </div>
+                <div style="display: flex; justify-content: center;"><input class="btn" onclick="btnAction(value)" style="width: 100px;" type="button" value="="></div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="index.js"></script>
+</html>
