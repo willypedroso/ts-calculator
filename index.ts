@@ -8,69 +8,110 @@ let operator = ''
 function btnAction(b: string){
     switch(b){
         case '7':
+            if(value1.length === 0){
+                clearDisplay()
+            }
             switchValue === 0 ?
             value1.push(b) :
             value2.push(b)
             display.value = value1.join('') + operator + value2.join('')
             break
         case '8':
+            if(value1.length === 0){
+                clearDisplay()
+            }
             switchValue === 0 ?
             value1.push(b) :
             value2.push(b)
             display.value = value1.join('') + operator + value2.join('')
             break
         case '9':
+            if(value1.length === 0){
+                clearDisplay()
+            }
             switchValue === 0 ?
             value1.push(b) :
             value2.push(b)
             display.value = value1.join('') + operator + value2.join('')
             break
         case '4':
+            if(value1.length === 0){
+                clearDisplay()
+            }
             switchValue === 0 ?
             value1.push(b) :
             value2.push(b)
             display.value = value1.join('') + operator + value2.join('')
             break
         case '5':
+            if(value1.length === 0){
+                clearDisplay()
+            }
             switchValue === 0 ?
             value1.push(b) :
             value2.push(b)
             display.value = value1.join('') + operator + value2.join('')
             break
         case '6':
+            if(value1.length === 0){
+                clearDisplay()
+            }
             switchValue === 0 ?
             value1.push(b) :
             value2.push(b)
             display.value = value1.join('') + operator + value2.join('')
             break
         case '1':
+            if(value1.length === 0){
+                clearDisplay()
+            }
             switchValue === 0 ?
             value1.push(b) :
             value2.push(b)
             display.value = value1.join('') + operator + value2.join('')
             break
         case '2':
+            if(value1.length === 0){
+                clearDisplay()
+            }
             switchValue === 0 ?
             value1.push(b) :
             value2.push(b)
             display.value = value1.join('') + operator + value2.join('')
             break
         case '3':
+            if(value1.length === 0){
+                clearDisplay()
+            }
             switchValue === 0 ?
             value1.push(b) :
             value2.push(b)
             display.value = value1.join('') + operator + value2.join('')
             break
         case '0':
+            if(value1.length === 0){
+                break
+            }
             switchValue === 0 ?
             value1.push(b) :
             value2.push(b)
             display.value = value1.join('') + operator + value2.join('')
             break
         case '.':
-            switchValue === 0 ?
-            value1.push(b) :
-            value2.push(b)
+            if(value1.length === 0){
+                clearDisplay()
+            }
+            if(switchValue === 0){
+                if(value1.length === 0){
+                    value1.push('0')
+                }
+                value1.push(b)
+            } else {
+                if(value2.length === 0){
+                    value2.push('0')
+                }
+                value2.push(b)
+            }
             display.value = value1.join('') + operator + value2.join('')
             break
         case '/':
@@ -101,19 +142,28 @@ function btnAction(b: string){
             calculate(value1, value2, operator)
             break
         case 'E':
-            switchValue === 0 ?
-            value1.pop() :
-            value2.pop()
-            display.value = value1.join('') + value2.join('')
+            if(operator !== '' && value2.length === 0){
+                operator = ''
+                switchValue = 0
+            } else {
+                switchValue === 0 ?
+                value1.pop() :
+                value2.pop()
+            }
+            display.value = value1.join('') + operator + value2.join('')
             break
         case 'C':
-            value1 = []
-            value2 = []
-            operator = ''
-            switchValue = 0
-            display.value = ''
+            clearDisplay()
             break
     }
+}
+
+function clearDisplay(){
+    value1 = []
+    value2 = []
+    operator = ''
+    switchValue = 0
+    display.value = ''
 }
 
 function calculate(v1: string[], v2: string[], op: string){
@@ -133,8 +183,8 @@ function calculate(v1: string[], v2: string[], op: string){
             break
     }
     display.value = result
-    v1 = []
-    v2 = []
-    op = ''
+    value1 = []
+    value2 = []
+    operator = ''
     switchValue = 0
 }
