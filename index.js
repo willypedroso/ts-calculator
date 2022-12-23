@@ -4,6 +4,16 @@ let value1 = [];
 let value2 = [];
 let switchValue = 0;
 let operator = '';
+const keys = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '/', '*', '-', '+', 'Enter'];
+window.addEventListener('keydown', (e) => {
+    if (keys.includes(e.key)) {
+        e.key === 'Enter' ? btnAction('=') :
+            e.key === 'Delete' ? btnAction('C') :
+                e.key === 'Backspace' ? btnAction('E') :
+                    btnAction(e.key);
+    }
+    console.log(e.key);
+});
 function btnAction(b) {
     switch (b) {
         case '7':
