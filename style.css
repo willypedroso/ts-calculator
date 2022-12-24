@@ -53,7 +53,7 @@ main {
     justify-content: center;
     background-image: linear-gradient(to right bottom, rgb(82, 82, 82) , rgb(175, 175, 175));
     padding: 10px;
-    border: 3px black solid;
+    border: 2px black solid;
     border-radius: 15px;
     box-shadow: 5px 5px 10px;
 }
@@ -78,4 +78,15 @@ main {
 
 .btn:hover{
     background-color: #efefef9a;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+footer a:hover {
+    color: rgb(0, 94, 255);
+    text-shadow: 2px 2px black;
 }
