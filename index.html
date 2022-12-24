@@ -11,33 +11,33 @@
     <main>
         <div id="calculator">
             <input type="text" readonly id="display">
-            <div id="buttons">
-                <div class="btnRow">
-                    <input class="btn" onclick="btnAction(value)" type="button" value="7">
-                    <input class="btn" onclick="btnAction(value)" type="button" value="8">
-                    <input class="btn" onclick="btnAction(value)" type="button" value="9">
-                    <input class="btn" onclick="btnAction(value)" style="background-color: rgb(230, 208, 17)" type="button" value="E">
-                    <input class="btn" onclick="btnAction(value)" style="background-color: rgb(224, 16, 16)" type="button" value="C">
-                </div>
-                <div class="btnRow">
-                    <input class="btn" onclick="btnAction(value)" type="button" value="4">
-                    <input class="btn" onclick="btnAction(value)" type="button" value="5">
-                    <input class="btn" onclick="btnAction(value)" type="button" value="6">
-                    <input class="btn" onclick="btnAction(value)" type="button" value="/">
-                    <input class="btn" onclick="btnAction(value)" type="button" value="-">
-                </div>
-                <div class="btnRow">
-                    <input class="btn" onclick="btnAction(value)" type="button" value="1">
-                    <input class="btn" onclick="btnAction(value)" type="button" value="2">
-                    <input class="btn" onclick="btnAction(value)" type="button" value="3">
-                    <input class="btn" onclick="btnAction(value)" type="button" value="*">
-                    <input class="btn" onclick="btnAction(value)" type="button" value="+">
-                </div>
-                <div style="display: flex; justify-content: center;">
-                    <input class="btn" onclick="btnAction(value)" style="width: 100px;" type="button" value="=">
-                    <input class="btn" onclick="btnAction(value)" type="button" value="0">
-                    <input class="btn" onclick="btnAction(value)" type="button" value=".">
-                </div>
+            <table id="buttons">
+                <tr>
+                    <td><input class="btn" onclick="btnAction(value)" type="button" value="7"></td>
+                    <td><input class="btn" onclick="btnAction(value)" type="button" value="8"></td>
+                    <td><input class="btn" onclick="btnAction(value)" type="button" value="9"></td>
+                    <td><input class="btn" onclick="btnAction(value)" style="background-color: rgb(230, 208, 17)" type="button" value="E"></td>
+                    <td><input class="btn" onclick="btnAction(value)" style="background-color: rgb(224, 16, 16)" type="button" value="C"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn" onclick="btnAction(value)" type="button" value="4"></td>
+                    <td><input class="btn" onclick="btnAction(value)" type="button" value="5"></td>
+                    <td><input class="btn" onclick="btnAction(value)" type="button" value="6"></td>
+                    <td><input class="btn" onclick="btnAction(value)" type="button" value="-"></td>
+                    <td><input class="btn" onclick="btnAction(value)" type="button" value="/"></td>
+                </tr>
+                <tr>
+                    <td><input class="btn" onclick="btnAction(value)" type="button" value="1"></td>
+                    <td><input class="btn" onclick="btnAction(value)" type="button" value="2"></td>
+                    <td><input class="btn" onclick="btnAction(value)" type="button" value="3"></td>
+                    <td><input class="btn" onclick="btnAction(value)" type="button" value="*"></td>
+                    <td rowspan="2"><input class="btn" onclick="btnAction(value)" style="height: 130px;" type="button" value="+"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input class="btn" onclick="btnAction(value)" type="button" value="0"></td>
+                    <td><input class="btn" onclick="btnAction(value)" type="button" value="."></td>
+                    <td><input class="btn" onclick="btnAction(value)" type="button" value="="></td>
+                </tr>
             </div>
         </div>
     </main>
