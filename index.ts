@@ -125,24 +125,53 @@ function btnAction(b: string){
 		display.value = `${value1.join("")} ${operator} ${value2.join("")}`;
 		break;
 	case "/":
+		if(value1.length === 0){
+			break;
+		}
+		if(value1.length !== 0 && value2.length !== 0){
+			calculate(value1, value2, operator, b);
+			break;
+		}
 		operator = b;
 		switchValue === 0 ?
 			switchValue++ : switchValue = 0;
 		display.value = `${value1.join("")} ${operator} ${value2.join("")}`;
 		break;
 	case "*":
+		if(value1.length === 0){
+			break;
+		}
+		if(value1.length !== 0 && value2.length !== 0){
+			calculate(value1, value2, operator, b);
+			break;
+		}
 		operator = b;
 		switchValue === 0 ?
 			switchValue++ : switchValue = 0;
 		display.value = `${value1.join("")} ${operator} ${value2.join("")}`;
 		break;
 	case "-":
-		operator = b;
-		switchValue === 0 ?
-			switchValue++ : switchValue = 0;
+		if(value1.length !== 0 && value2.length !== 0){
+			calculate(value1, value2, operator, b);
+			break;
+		}
+		if(value1.length === 0){
+			value1.push(b);
+		} else {
+			operator = b;
+			switchValue === 0 ?
+				switchValue++ : switchValue = 0;
+		}
 		display.value = `${value1.join("")} ${operator} ${value2.join("")}`;
 		break;
 	case "+":
+		if(value1.length === 0){
+			break;
+		}
+		if(value1.length !== 0 && value2.length !== 0){
+			calculate(value1, value2, operator, b);
+			break;
+		}
 		operator = b;
 		switchValue === 0 ?
 			switchValue++ : switchValue = 0;
@@ -176,7 +205,7 @@ function clearDisplay(){
 	display.value = "";
 }
 
-function calculate(v1: string[], v2: string[], op: string){
+function calculate(v1: string[], v2: string[], op: string, newOp?: string){
 	let result = "";
 	switch(op){
 	case "+":
@@ -192,9 +221,17 @@ function calculate(v1: string[], v2: string[], op: string){
 		result = (parseFloat(v1.join("")) / parseFloat(v2.join(""))).toString();
 		break;
 	}
-	display.value = result;
-	value1 = [];
-	value2 = [];
-	operator = "";
-	switchValue = 0;
+	if(newOp){
+		display.value = result;
+		value1 = result.split("");
+		value2 = [];
+		operator = newOp;
+		switchValue = 1;
+	} else {
+		display.value = result;
+		value1 = [];
+		value2 = [];
+		operator = "";
+		switchValue = 0;
+	}
 }
