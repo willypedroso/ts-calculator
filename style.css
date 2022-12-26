@@ -5,6 +5,12 @@
     font-family: sans-serif;
 }
 
+@media(max-width: 290px){
+    * {
+        font-size: 0.7rem;
+    }
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -12,7 +18,7 @@ body {
     align-items: center;
     height: 100vh;
     gap: 20px;
-    background-image: linear-gradient(to left bottom, rgb(7, 115, 177), rgb(0, 58, 96));
+    background-image: linear-gradient(to left bottom, rgb(0, 74, 117), rgb(68, 180, 255));
 }
 
 header {
@@ -84,6 +90,12 @@ main {
     margin: 20px;
     font-style: italic;
     font-weight: 600;
+}
+
+@media(max-width: 750px){
+    #orientations {
+        display: none;
+    }
 }
 
 footer a {
